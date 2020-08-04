@@ -68,45 +68,49 @@ let blueCounterInc = 0;
 
 
 boxes.colorClick.onclick = () => {
+    let co = boxes.colorClick.clicked;
+    let co1 = boxes.colorClick1.clicked;
+    let co2 = boxes.colorClick2.clicked;
+    let co3 = boxes.colorClick3.clicked;
     boxes.colorClick.style.backgroundColor = colors[0];
     if (colors[0] === 'red') {
         boxes.colorClick.innerHTML = "<h3>It's red!</h3>";
         boxes.colorClick.clicked = true;
-        if (boxes.colorClick1.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co1 && co2 || co1 && co3 || co2 && co3) {
             redCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick1.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co1 || co3) {
             redCounterInc += 2;
-        } else if (!boxes.colorClick1.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co1 && !co2 && !co3) {
             redCounterInc += 3;
         };
     } else if (colors[0] === 'yellow') {
         boxes.colorClick.innerHTML = "<h3>It's yellow!</h3>";
         boxes.colorClick.clicked = true;
-        if (boxes.colorClick1.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co1 && co2 || co1 && co3 || co2 && co3) {
             yellowCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick1.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co1 || co3) {
             yellowCounterInc += 2;
-        } else if (!boxes.colorClick1.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co1 && !co2 && !co3) {
             yellowCounterInc += 3;
         };
     } else if (colors[0] === 'green') {
         boxes.colorClick.innerHTML = "<h3>It's green!</h3>";
         boxes.colorClick.clicked = true;
-        if (boxes.colorClick1.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co1 && co2 || co1 && co3 || co2 && co3) {
             greenCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick1.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co1 || co3) {
             greenCounterInc += 2;
-        } else if (!boxes.colorClick1.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co1 && !co2 && !co3) {
             greenCounterInc += 3;
         };
     } else if (colors[0] === 'blue') {
         boxes.colorClick.innerHTML = "<h3>It's blue!</h3>";
         boxes.colorClick.clicked = true;
-        if (boxes.colorClick1.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co1 && co2 || co1 && co3 || co2 && co3) {
             blueCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick1.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co1 || co3) {
             blueCounterInc += 2;
-        } else if (!boxes.colorClick1.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co1 && !co2 && !co3) {
             blueCounterInc += 3;
         };
     }
@@ -119,45 +123,49 @@ boxes.colorClick.onclick = () => {
 
 
 boxes.colorClick1.onclick = () => {
+    let co = boxes.colorClick.clicked;
+    let co1 = boxes.colorClick1.clicked;
+    let co2 = boxes.colorClick2.clicked;
+    let co3 = boxes.colorClick3.clicked;
     boxes.colorClick1.style.backgroundColor = colors[1];
     if (colors[1] === 'red') {
         boxes.colorClick1.innerHTML = "<h3>It's red!</h3>";
         boxes.colorClick1.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co && co2 || co && co3 || co2 && co3) {
             redCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co || co3) {
             redCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co2 && !co3) {
             redCounterInc += 3;
         };
     } else if (colors[1] === 'yellow') {
         boxes.colorClick1.innerHTML = "<h3>It's yellow!</h3>";
         boxes.colorClick1.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co && co2 || co && co3 || co2 && co3) {
             yellowCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co || co3) {
             yellowCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co2 && !co3) {
             yellowCounterInc += 3;
         };
     } else if (colors[1] === 'green') {
         boxes.colorClick1.innerHTML = "<h3>It's green!</h3>";
         boxes.colorClick1.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co && co2 || co && co3 || co2 && co3) {
             greenCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co || co3) {
             greenCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co2 && !co3) {
             greenCounterInc += 3;
         };
     } else if (colors[1] === 'blue') {
         boxes.colorClick1.innerHTML = "<h3>It's blue!</h3>";
         boxes.colorClick1.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick2.clicked && boxes.colorClick3.clicked) {
+        if (co && co2 || co && co3 || co2 && co3) {
             blueCounterInc += 1;
-        } else if (boxes.colorClick2.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co2 || co || co3) {
             blueCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick2.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co2 && !co3) {
             blueCounterInc += 3;
         };
     }
@@ -167,45 +175,50 @@ boxes.colorClick1.onclick = () => {
     blueCounter.innerHTML = blueCounterInc;
 }
 boxes.colorClick2.onclick = () => {
+    let co = boxes.colorClick.clicked;
+    let co1 = boxes.colorClick1.clicked;
+    let co2 = boxes.colorClick2.clicked;
+    let co3 = boxes.colorClick3.clicked;
+
     boxes.colorClick2.style.backgroundColor = colors[2];
     if (colors[2] === 'red') {
         boxes.colorClick2.innerHTML = "<h3>It's red!</h3>";
         boxes.colorClick2.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked) {
+        if (co && co1 || co && co3 || co1 && co3) {
             redCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co1 || co || co3) {
             redCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co1 && !co3) {
             redCounterInc += 3;
         };
     } else if (colors[2] === 'yellow') {
         boxes.colorClick2.innerHTML = "<h3>It's yellow!</h3>";
         boxes.colorClick2.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked) {
+        if (co && co1 || co && co3 || co1 && co3) {
             yellowCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co1 || co || co3) {
             yellowCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co1 && !co3) {
             yellowCounterInc += 3;
         };
     } else if (colors[2] === 'green') {
         boxes.colorClick2.innerHTML = "<h3>It's green!</h3>";
         boxes.colorClick2.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked) {
+        if (co && co1 || co && co3 || co1 && co3) {
             greenCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co1 || co || co3) {
             greenCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co1 && !co3) {
             greenCounterInc += 3;
         };
     } else if (colors[2] === 'blue') {
         boxes.colorClick2.innerHTML = "<h3>It's blue!</h3>";
         boxes.colorClick2.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick3.clicked || boxes.colorClick1.clicked && boxes.colorClick3.clicked) {
+        if (co && co1 || co && co3 || co1 && co3) {
             blueCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick3.clicked) {
+        } else if (co1 || co || co3) {
             blueCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick3.clicked) {
+        } else if (!co && !co1 && !co3) {
             blueCounterInc += 3;
         };
     }
@@ -215,45 +228,50 @@ boxes.colorClick2.onclick = () => {
     blueCounter.innerHTML = blueCounterInc;
 }
 boxes.colorClick3.onclick = () => {
+    let co = boxes.colorClick.clicked;
+    let co1 = boxes.colorClick1.clicked;
+    let co2 = boxes.colorClick2.clicked;
+    let co3 = boxes.colorClick3.clicked;
+
     boxes.colorClick3.style.backgroundColor = colors[3];
     if (colors[3] === 'red') {
         boxes.colorClick3.innerHTML = "<h3>It's red!</h3>";
         boxes.colorClick3.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick2.clicked) {
+        if (co && co1 || co && co2 || co1 && co2) {
             redCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick2.clicked) {
+        } else if (co1 || co || co2) {
             redCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick2.clicked) {
+        } else if (!co && !co1 && !co2) {
             redCounterInc += 3;
         };
     } else if (colors[3] === 'yellow') {
         boxes.colorClick3.innerHTML = "<h3>It's yellow!</h3>";
         boxes.colorClick3.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick2.clicked) {
+        if (co && co1 || co && co2 || co1 && co2) {
             yellowCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick2.clicked) {
+        } else if (co1 || co || co2) {
             yellowCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick2.clicked) {
+        } else if (!co && !co1 && !co2) {
             yellowCounterInc += 3;
         };
     } else if (colors[3] === 'green') {
         boxes.colorClick3.innerHTML = "<h3>It's green!</h3>";
         boxes.colorClick3.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick2.clicked) {
+        if (co && co1 || co && co2 || co1 && co2) {
             greenCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick2.clicked) {
+        } else if (co1 || co || co2) {
             greenCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick2.clicked) {
+        } else if (!co && !co1 && !co2) {
             greenCounterInc += 3;
         };
     } else if (colors[3] === 'blue') {
         boxes.colorClick3.innerHTML = "<h3>It's blue!</h3>";
         boxes.colorClick3.clicked = true;
-        if (boxes.colorClick.clicked && boxes.colorClick1.clicked || boxes.colorClick.clicked && boxes.colorClick2.clicked || boxes.colorClick1.clicked && boxes.colorClick2.clicked) {
+        if (co && co1 || co && co2 || co1 && co2) {
             blueCounterInc += 1;
-        } else if (boxes.colorClick1.clicked || boxes.colorClick.clicked || boxes.colorClick2.clicked) {
+        } else if (co1 || co || co2) {
             blueCounterInc += 2;
-        } else if (!boxes.colorClick.clicked && !boxes.colorClick1.clicked && !boxes.colorClick2.clicked) {
+        } else if (!co && !co1 && !co2) {
             blueCounterInc += 3;
         };
     }
